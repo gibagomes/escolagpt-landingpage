@@ -1,0 +1,217 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #0a0902;
+}
+
+.logo {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%; /* Borda circular */
+    border: 5px solid #fff; /* Borda branca para destacar a logo */
+    margin-bottom: 20px;
+    margin-top: 20px;
+    object-fit: cover; /* Para garantir que a imagem se ajuste à borda circular */
+}
+
+.site-title {
+    font-size: 2.5em;
+    margin: 0;
+    color: #ffffff;
+}
+
+nav ul.menu {
+    list-style: none;
+    display: flex;
+    margin: 10px 0 0 0;
+    padding: 0;
+    background-color: #f1c40f; /* Ajuste para tornar o menu visível */
+}
+
+nav ul.menu > li {
+    position: relative;
+}
+
+nav ul.menu > li a {
+    color: #000;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+nav ul.menu > li:hover > a {
+    background-color: #e67e22;
+}
+
+nav ul.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f1c40f;
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1; /* Garante que o submenu apareça acima de outros elementos */
+}
+
+nav ul.menu > li:hover ul.submenu {
+    display: block;
+}
+
+nav ul.submenu li a {
+    padding: 10px 15px;
+    color: #000;
+}
+
+.gallery {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza a galeria */
+}
+
+.gallery h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center; /* Centraliza as imagens dentro da galeria */
+    flex-wrap: wrap;
+    gap: 80px; /* Espaçamento entre os cards */
+}
+
+.card-interactive {
+    width: 300px; /* Define um tamanho fixo para as imagens */
+    cursor: pointer;
+    position: relative; /* Necessário para o overlay */
+}
+
+.card-interactive img {
+    width: 100%;
+    border: 5px solid #f1c40f;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.card-interactive:hover img {
+    transform: scale(1.05);
+}
+
+.card-interactive .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px; /* Adiciona espaçamento interno */
+    font-size: 0.9em; /* Ajusta o tamanho da fonte da descrição */
+    text-align: center; /* Centraliza o texto */
+}
+
+.card-interactive:hover .overlay {
+    opacity: 1;
+}
+
+.cards {
+    padding: 20px;
+    background-color: #000; /* Alterado para preto */
+}
+
+.cards h2 {
+    text-align: center; /* Alinha o título ao centro */
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: #deb009;
+    color: #000;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card button {
+    background-color: #000;
+    color:#fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.card button:hover {
+    background-color: #e67e22;
+    color: #fff;
+}
+
+/* Seção de Depoimentos */
+.testimonials {
+    padding: 50px 20px;
+    background-color: #0a0902;
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #f1c40f;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.testimonial-card {
+    background-color: #333;
+    color: #f1c40f;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.testimonial-card p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #f1c40f;
+}
